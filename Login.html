@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesión en UCR</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/webp" href="logo-UCR.webp">
+</head>
+<body>
+
+    <header class="barra-superior">
+        <img src="UCR.png" alt="Logo de la maqueta" class="logo-encabezado">
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta">
+
+            <h1>Inicio de sesión único</h1>
+
+            <form action="/demo-login" method="POST">
+
+                <label for="usuario">Usuario o email</label>
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario_demo"
+                    autocomplete="off"
+                    required
+                >
+
+                <label for="clave">Contraseña</label>
+                <input
+                    type="password"
+                    id="clave"
+                    name="clave_demo"
+                    autocomplete="off"
+                    required
+                >
+
+                <label class="captcha-demo" for="captcha-demo">
+                    <input
+                        type="checkbox"
+                        id="captcha-demo"
+                        autocomplete="off"
+                    >
+
+                    <span class="captcha-casilla"></span>
+                    <span class="captcha-texto">No soy un robot</span>
+                    <span class="captcha-recarga" aria-hidden="true">⟳</span>
+                </label>
+
+                <button type="submit">Iniciar sesión</button>
+
+                <button type="button" class="boton-secundario">
+                    Otra método de autenticación
+                </button>
+
+            </form>
+
+            <a href="#informacion" class="enlace-inferior">
+                 ¿Has olvidado tu contraseña?
+            </a>
+
+        </section>
+    </main>
+
+    <footer class="pie-pagina" id="informacion">
+        <div class="footer-final">
+            © 2026 Universidad de Costa Rica | Reino: UCR
+        </div>
+    </footer>
+
+  <script>
+    const captcha = document.getElementById("captcha-demo");
+    const casilla = document.querySelector(".captcha-casilla");
+    const texto = document.querySelector(".captcha-texto");
+    let procesando = false;
+
+    captcha.checked = false;
+    captcha.disabled = false;
+
+    captcha.addEventListener("change", function () {
+        if (!captcha.checked || procesando) return;
+
+        procesando = true;
+        texto.textContent = "Verificando";
+        casilla.classList.add("cargando");
+
+        setTimeout(function () {
+            casilla.classList.remove("cargando");
+            casilla.classList.add("verificado");
+            texto.textContent = "Verificado";
+            captcha.checked = true;
+            captcha.disabled = true;
+        }, 1200);
+    });
+</script>
+
+
+</body>
+</html>
