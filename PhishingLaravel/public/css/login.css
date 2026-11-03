@@ -52,7 +52,7 @@ body {
             rgba(0, 125, 195, 0.35),
             rgba(0, 100, 175, 0.45)
         ),
-        url("Fondo azul tecnológico con iconos sutiles.png");
+        url("../img/Fondo azul tecnológico con iconos sutiles.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

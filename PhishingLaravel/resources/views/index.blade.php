@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,8 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Entrar al sitio | Mediación Virtual</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="8157342d-8f07-4e4d-b33b-83895c5cbb32.png">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="icon" type="image/png" href="{{ asset('img/8157342d-8f07-4e4d-b33b-83895c5cbb32.png') }}">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
       <h1>Acceso a Mediacion Virtual</h1>
 
-      <a class="access-label" id="access-button" href="./Login.html" target="_self" rel="noopener noreferrer"
+      <a class="access-label" id="access-button" href="{{ url('/Login') }}" target="_self" rel="noopener noreferrer"
         aria-label="Mostrar aviso de seguridad">
         <svg class="user-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" />
@@ -57,13 +58,13 @@
 
 
     <div class="footer-left">
-      <img src="UCR.png" alt="Logo de la UCR" class="logo-ucr">
-      <img src="vd.png" alt="Logo de Vicerrectoría" class="logo-vd">
+      <img src="{{ asset('img/UCR.png') }}" alt="Logo de la UCR" class="logo-ucr">
+      <img src="{{ asset('img/vd.png') }}" alt="Logo de Vicerrectoría" class="logo-vd">
     </div>
 
 
     <div class="footer-center">
-      <img src="METICS.png" alt="Logo de METICS" class="logo-metics">
+      <img src="{{ asset('img/METICS.png') }}" alt="Logo de METICS" class="logo-metics">
       <p>
 
         © 2026 Universidad de Costa Rica - Tel. (506) 2511-5015
@@ -84,7 +85,7 @@
 
   </footer>
 
-  <script src="app.js"></script>
+  <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 

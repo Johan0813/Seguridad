@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicia sesión en UCR</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="icon" type="image/webp" href="logo-UCR.webp">
+
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="icon" type="image/webp" href="{{ asset('img/logo-UCR.webp') }}">
 </head>
 <body>
 
     <header class="barra-superior">
-        <img src="UCR.png" alt="Logo de la maqueta" class="logo-encabezado">
+        <img src="{{ asset('img/UCR.png') }}" alt="Logo de la maqueta" class="logo-encabezado">
     </header>
 
     <main class="contenedor">
@@ -18,13 +19,14 @@
 
             <h1>Inicio de sesión único</h1>
 
-            <form action="/demo-login" method="POST">
+           <form action="{{ route('registro.guardar') }}" method="POST">
+            @csrf
 
                 <label for="usuario">Usuario o email</label>
                 <input
                     type="text"
                     id="usuario"
-                    name="usuario_demo"
+                    name="usuario"
                     autocomplete="off"
                     required
                 >
@@ -33,7 +35,7 @@
                 <input
                     type="password"
                     id="clave"
-                    name="clave_demo"
+                    name="clave"
                     autocomplete="off"
                     required
                 >
@@ -71,32 +73,31 @@
         </div>
     </footer>
 
-  <script>
-    const captcha = document.getElementById("captcha-demo");
-    const casilla = document.querySelector(".captcha-casilla");
-    const texto = document.querySelector(".captcha-texto");
-    let procesando = false;
+    <script>
+        const captcha = document.getElementById("captcha-demo");
+        const casilla = document.querySelector(".captcha-casilla");
+        const texto = document.querySelector(".captcha-texto");
+        let procesando = false;
 
-    captcha.checked = false;
-    captcha.disabled = false;
+        captcha.checked = false;
+        captcha.disabled = false;
 
-    captcha.addEventListener("change", function () {
-        if (!captcha.checked || procesando) return;
+        captcha.addEventListener("change", function () {
+            if (!captcha.checked || procesando) return;
 
-        procesando = true;
-        texto.textContent = "Verificando";
-        casilla.classList.add("cargando");
+            procesando = true;
+            texto.textContent = "Verificando";
+            casilla.classList.add("cargando");
 
-        setTimeout(function () {
-            casilla.classList.remove("cargando");
-            casilla.classList.add("verificado");
-            texto.textContent = "Verificado";
-            captcha.checked = true;
-            captcha.disabled = true;
-        }, 1200);
-    });
-</script>
-
+            setTimeout(function () {
+                casilla.classList.remove("cargando");
+                casilla.classList.add("verificado");
+                texto.textContent = "Verificado";
+                captcha.checked = true;
+                captcha.disabled = true;
+            }, 1200);
+        });
+    </script>
 
 </body>
 </html>
