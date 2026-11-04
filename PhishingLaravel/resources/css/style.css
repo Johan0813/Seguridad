@@ -539,3 +539,16 @@ a.access-label:active .user-icon {
     color: #fff !important;
     text-decoration: underline !important;
 }
+
+.site-footer .footer-contact a,
+.site-footer .footer-contact a:link,
+.site-footer .footer-contact a:visited,
+.site-footer .footer-contact a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.site-footer .footer-contact a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
