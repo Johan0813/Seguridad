@@ -31,7 +31,7 @@ body {
 
     padding: 10px;
 
-    background-image: url("../img/5c2d42ab-0a5d-401e-8277-175cad986fad.png");
+    background-image: url("./5c2d42ab-0a5d-401e-8277-175cad986fad.png");
     background-size: cover;
     background-position: center 43%;
     background-repeat: no-repeat;
@@ -526,4 +526,29 @@ a.access-label:active {
 
 a.access-label:active .user-icon {
     fill: #000000;
+}
+.footer-contact a,
+.footer-contact a:link,
+.footer-contact a:visited,
+.footer-contact a:active {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.footer-contact a:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+.site-footer .footer-contact a,
+.site-footer .footer-contact a:link,
+.site-footer .footer-contact a:visited,
+.site-footer .footer-contact a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.site-footer .footer-contact a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
 }
