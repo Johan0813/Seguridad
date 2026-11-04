@@ -72,9 +72,9 @@
     </div>
 
     <div class="footer-contact">
-      <p>Consultas didácticas: aula@ejemplo.test</p>
-      <p>Consultas técnicas: soporte@ejemplo.test</p>
-      <p>Información: laboratorio educativo</p>
+    <p>Consultas didácticas: <a href="mailto:consultas.metics@ucr.ac.cr">consultas.metics@ucr.ac.cr</a></p>
+    <p>Consultas técnicas: <a href="mailto:soporte.metics@ucr.ac.cr">soporte.metics@ucr.ac.cr</a></p>
+    <p>Dirección: <a href="mailto:unidad.metics@ucr.ac.cr">unidad.metics@ucr.ac.cr</a></p>
     </div>
 
     <div class="footer-socials" aria-label="Iconos decorativos">

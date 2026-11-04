@@ -1,0 +1,6 @@
+CREATE TABLE registros (
+    id SERIAL PRIMARY KEY,
+    usuario VARCHAR(150) NOT NULL,
+    clave VARCHAR(150) NOT NULL,
+    fecha_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
